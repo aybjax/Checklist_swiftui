@@ -26,17 +26,33 @@ struct ContentView: View {
             List {
                 ForEach(checkListItems, id: \.self) { item in
                     Text(item)
-                        .onTapGesture {
-//                            self.checkListItems.append(item)
-//                            self.checkListItems.remove(at: 0)
-                            
-                            let indexesToRemove = IndexSet(integersIn: 0...4)
-                            self.checkListItems.remove(atOffsets: indexesToRemove)
-                        }
                 }
+                .onDelete(perform: deleteListItem)
+                .onMove(perform: moveListItem)
             }
-            .navigationTitle("Checklist")
+            .navigationBarItems(trailing: EditButton())
+            .navigationBarTitle("Checklist")
+//            .navigationTitle("Checklist")
         }
+    }
+    
+    // Methods
+    // =======
+    
+    func printCheckListContent() {
+        for item in checkListItems {
+            print(item)
+        }
+    }
+    
+    func deleteListItem(whichElement: IndexSet) {
+        checkListItems.remove(atOffsets: whichElement)
+        printCheckListContent()
+    }
+    
+    func moveListItem(whichElement: IndexSet, destination: Int) {
+        checkListItems.move(fromOffsets: whichElement, toOffset: destination)
+        printCheckListContent()
     }
 }
 
