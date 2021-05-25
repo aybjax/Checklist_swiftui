@@ -32,6 +32,9 @@ struct ContentView: View {
                             ? Text("✅")
                             : Text("◻️")
                     }
+                    .onTapGesture {
+                        print("checkItem name is \(item.name)")
+                    }
                 }
                 .onDelete(perform: deleteListItem)
                 .onMove(perform: moveListItem)
