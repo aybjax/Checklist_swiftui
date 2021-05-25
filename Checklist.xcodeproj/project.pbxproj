@@ -11,6 +11,7 @@
 		AD207A25265D5A34003E9C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD207A24265D5A34003E9C47 /* ContentView.swift */; };
 		AD207A27265D5A35003E9C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD207A26265D5A35003E9C47 /* Assets.xcassets */; };
 		AD207A2A265D5A35003E9C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD207A29265D5A35003E9C47 /* Preview Assets.xcassets */; };
+		AD207A48265D8A0B003E9C47 /* ChechListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD207A47265D8A0B003E9C47 /* ChechListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		AD207A26265D5A35003E9C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD207A29265D5A35003E9C47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD207A2B265D5A35003E9C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD207A47265D8A0B003E9C47 /* ChechListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChechListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				AD207A22265D5A34003E9C47 /* ChecklistApp.swift */,
 				AD207A24265D5A34003E9C47 /* ContentView.swift */,
+				AD207A46265D89EA003E9C47 /* Models */,
 				AD207A26265D5A35003E9C47 /* Assets.xcassets */,
 				AD207A2B265D5A35003E9C47 /* Info.plist */,
 				AD207A28265D5A35003E9C47 /* Preview Content */,
@@ -67,6 +70,14 @@
 				AD207A29265D5A35003E9C47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD207A46265D89EA003E9C47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD207A47265D8A0B003E9C47 /* ChechListItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD207A25265D5A34003E9C47 /* ContentView.swift in Sources */,
+				AD207A48265D8A0B003E9C47 /* ChechListItem.swift in Sources */,
 				AD207A23265D5A34003E9C47 /* ChecklistApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

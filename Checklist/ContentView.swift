@@ -14,18 +14,24 @@ struct ContentView: View {
     
     @State
     var checkListItems = [
-        "Walk the dog",
-        "Brush my teeth",
-        "Learn iOS development",
-        "Soccer practice",
-        "Eat ice cream",
+        CheckListItem(name: "Walk the dog"),
+        CheckListItem(name: "Brush my teeth"),
+        CheckListItem(name: "Learn iOS development", isChecked: true),
+        CheckListItem(name: "Soccer practice"),
+        CheckListItem(name: "Eat ice cream", isChecked: false),
     ]
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(checkListItems, id: \.self) { item in
-                    Text(item)
+                ForEach(checkListItems) { item in
+                    HStack {
+                        Text(item.name)
+                        Spacer()
+                        item.isChecked
+                            ? Text("✅")
+                            : Text("◻️")
+                    }
                 }
                 .onDelete(perform: deleteListItem)
                 .onMove(perform: moveListItem)
