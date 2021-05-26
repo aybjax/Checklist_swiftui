@@ -1,8 +1,8 @@
 //
-//  ChechListItem.swift
+//  ChecklistItem.swift
 //  Checklist
 //
-//  Created by aybjax on 5/26/21.
+//  Created by aybjax on 5/27/21.
 //
 
 import Foundation
