@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ Model
+ */
 struct CheckListItem: Identifiable {
     let id = UUID()
     var name: String

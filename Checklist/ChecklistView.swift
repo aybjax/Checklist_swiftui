@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ View
+ */
 struct ChecklistView: View {
     // Properties
     // ==========

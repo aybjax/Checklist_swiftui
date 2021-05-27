@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ ModelView
+ */
 class Checklist: ObservableObject {
     
     @Published
