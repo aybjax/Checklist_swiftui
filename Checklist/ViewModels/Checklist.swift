@@ -24,6 +24,11 @@ class Checklist: ObservableObject {
     // Methods
     // =======
     
+    init() {
+        print("Documents directory - \(documentsDirectory())")
+        print("Data file - \(dataFilePath())")
+    }
+    
     func printCheckListContent() {
         for item in items {
             print(item)
@@ -38,5 +43,16 @@ class Checklist: ObservableObject {
     func moveListItem(whichElement: IndexSet, destination: Int) {
         items.move(fromOffsets: whichElement, toOffset: destination)
         printCheckListContent()
+    }
+    
+    func documentsDirectory() -> URL {
+        let paths = FileManager.default
+            .urls(for: .documentDirectory, in: .userDomainMask)
+        
+        return paths[0]
+    }
+    
+    func dataFilePath() -> URL {
+        return documentsDirectory().appendingPathComponent("Checklist.plist")
     }
 }

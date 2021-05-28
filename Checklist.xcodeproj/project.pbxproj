@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		AD1F0612265EFEBB00BC1292 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */; };
 		AD1F0616265EFF5A00BC1292 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F0615265EFF5A00BC1292 /* Checklist.swift */; };
-		AD203C19266051470012B6CB /* EditChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD203C18266051470012B6CB /* EditChecklistItem.swift */; };
+		AD203C19266051470012B6CB /* EditChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD203C18266051470012B6CB /* EditChecklistItemView.swift */; };
 		AD203C1C266061E30012B6CB /* NewChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */; };
 		AD207A23265D5A34003E9C47 /* ChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD207A22265D5A34003E9C47 /* ChecklistApp.swift */; };
 		AD207A25265D5A34003E9C47 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD207A24265D5A34003E9C47 /* ChecklistView.swift */; };
 		AD207A27265D5A35003E9C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD207A26265D5A35003E9C47 /* Assets.xcassets */; };
 		AD207A2A265D5A35003E9C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD207A29265D5A35003E9C47 /* Preview Assets.xcassets */; };
+		AD2752FC2661880400561B1B /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2752FB2661880400561B1B /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		AD1F0615265EFF5A00BC1292 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
-		AD203C18266051470012B6CB /* EditChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItem.swift; sourceTree = "<group>"; };
+		AD203C18266051470012B6CB /* EditChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItemView.swift; sourceTree = "<group>"; };
 		AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChecklistItemView.swift; sourceTree = "<group>"; };
 		AD207A1F265D5A34003E9C47 /* Checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD207A22265D5A34003E9C47 /* ChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistApp.swift; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		AD207A26265D5A35003E9C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD207A29265D5A35003E9C47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD207A2B265D5A35003E9C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD2752FB2661880400561B1B /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +62,13 @@
 		AD207A21265D5A34003E9C47 /* Checklist */ = {
 			isa = PBXGroup;
 			children = (
+				AD27530526619EB500561B1B /* Views */,
 				AD207A22265D5A34003E9C47 /* ChecklistApp.swift */,
-				AD207A24265D5A34003E9C47 /* ChecklistView.swift */,
+				AD27530226619E6000561B1B /* ViewModels */,
+				AD2752FF26619E1F00561B1B /* Models */,
 				AD207A26265D5A35003E9C47 /* Assets.xcassets */,
 				AD207A2B265D5A35003E9C47 /* Info.plist */,
 				AD207A28265D5A35003E9C47 /* Preview Content */,
-				AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */,
-				AD1F0615265EFF5A00BC1292 /* Checklist.swift */,
-				AD203C18266051470012B6CB /* EditChecklistItem.swift */,
-				AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -79,6 +79,33 @@
 				AD207A29265D5A35003E9C47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD2752FF26619E1F00561B1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD27530226619E6000561B1B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F0615265EFF5A00BC1292 /* Checklist.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AD27530526619EB500561B1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD2752FB2661880400561B1B /* RowView.swift */,
+				AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */,
+				AD203C18266051470012B6CB /* EditChecklistItemView.swift */,
+				AD207A24265D5A34003E9C47 /* ChecklistView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD203C19266051470012B6CB /* EditChecklistItem.swift in Sources */,
+				AD203C19266051470012B6CB /* EditChecklistItemView.swift in Sources */,
 				AD203C1C266061E30012B6CB /* NewChecklistItemView.swift in Sources */,
+				AD2752FC2661880400561B1B /* RowView.swift in Sources */,
 				AD1F0616265EFF5A00BC1292 /* Checklist.swift in Sources */,
 				AD207A25265D5A34003E9C47 /* ChecklistView.swift in Sources */,
 				AD207A23265D5A34003E9C47 /* ChecklistApp.swift in Sources */,
