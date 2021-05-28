@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD1F0612265EFEBB00BC1292 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */; };
 		AD1F0616265EFF5A00BC1292 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F0615265EFF5A00BC1292 /* Checklist.swift */; };
+		AD203C19266051470012B6CB /* EditChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD203C18266051470012B6CB /* EditChecklistItem.swift */; };
+		AD203C1C266061E30012B6CB /* NewChecklistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */; };
 		AD207A23265D5A34003E9C47 /* ChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD207A22265D5A34003E9C47 /* ChecklistApp.swift */; };
 		AD207A25265D5A34003E9C47 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD207A24265D5A34003E9C47 /* ChecklistView.swift */; };
 		AD207A27265D5A35003E9C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD207A26265D5A35003E9C47 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		AD1F0615265EFF5A00BC1292 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		AD203C18266051470012B6CB /* EditChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistItem.swift; sourceTree = "<group>"; };
+		AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChecklistItemView.swift; sourceTree = "<group>"; };
 		AD207A1F265D5A34003E9C47 /* Checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD207A22265D5A34003E9C47 /* ChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistApp.swift; sourceTree = "<group>"; };
 		AD207A24265D5A34003E9C47 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				AD207A28265D5A35003E9C47 /* Preview Content */,
 				AD1F0611265EFEBB00BC1292 /* ChecklistItem.swift */,
 				AD1F0615265EFF5A00BC1292 /* Checklist.swift */,
+				AD203C18266051470012B6CB /* EditChecklistItem.swift */,
+				AD203C1B266061E30012B6CB /* NewChecklistItemView.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD203C19266051470012B6CB /* EditChecklistItem.swift in Sources */,
+				AD203C1C266061E30012B6CB /* NewChecklistItemView.swift in Sources */,
 				AD1F0616265EFF5A00BC1292 /* Checklist.swift in Sources */,
 				AD207A25265D5A34003E9C47 /* ChecklistView.swift in Sources */,
 				AD207A23265D5A34003E9C47 /* ChecklistApp.swift in Sources */,

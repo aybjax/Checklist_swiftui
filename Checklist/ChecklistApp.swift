@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// Probably this is instead of app delegate
+// ========================================
+
 @main
 struct ChecklistApp: App {
     var body: some Scene {

@@ -14,11 +14,11 @@ class Checklist: ObservableObject {
     
     @Published
     var items = [
-        CheckListItem(name: "Walk the dog"),
-        CheckListItem(name: "Brush my teeth"),
-        CheckListItem(name: "Learn iOS development", isChecked: true),
-        CheckListItem(name: "Soccer practice"),
-        CheckListItem(name: "Eat ice cream", isChecked: false),
+        ChecklistItem(name: "Walk the dog"),
+        ChecklistItem(name: "Brush my teeth"),
+        ChecklistItem(name: "Learn iOS development", isChecked: true),
+        ChecklistItem(name: "Soccer practice"),
+        ChecklistItem(name: "Eat ice cream", isChecked: false),
     ]
     
     // Methods
