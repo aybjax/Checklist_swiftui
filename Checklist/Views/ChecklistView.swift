@@ -19,9 +19,11 @@ struct ChecklistView: View {
     var body: some View {
         NavigationView {
             List {
-//                boolArr.indices) { idx in
+                // there was index out of range error
                 ForEach(checklist.items.indices) { idx in
-                    RowView(checklistItem: $checklist.items[idx])
+                    idx < (checklist.items.count ?? 0 ) ?
+                        RowView(checklistItem: $checklist.items[idx]) :
+                        nil
                 }
                 .onDelete(perform: checklist.deleteListItem)
                 .onMove(perform: checklist.moveListItem)
@@ -39,6 +41,9 @@ struct ChecklistView: View {
                 // trailing: T
                 trailing: EditButton()
             )
+            .onAppear(){
+                checklist.saveListItems()
+            }
             .navigationBarTitle("Checklist")
 //            .navigationTitle("Checklist")
         }

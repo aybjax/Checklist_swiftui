@@ -29,7 +29,9 @@ struct NewChecklistItemView: View {
                 checklist.items.append(newChecklistItem)
 //                print("****************")
 //                print(presentationMode)
+                checklist.saveListItems()
                 presentationMode.wrappedValue.dismiss()
+                
             }) {
                 HStack {
                     Image(systemName: "plus.circle.fill")

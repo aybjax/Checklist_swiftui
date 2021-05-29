@@ -13,13 +13,7 @@ import Foundation
 class Checklist: ObservableObject {
     
     @Published
-    var items = [
-        ChecklistItem(name: "Walk the dog"),
-        ChecklistItem(name: "Brush my teeth"),
-        ChecklistItem(name: "Learn iOS development", isChecked: true),
-        ChecklistItem(name: "Soccer practice"),
-        ChecklistItem(name: "Eat ice cream", isChecked: false),
-    ]
+    var items: [ChecklistItem] = []
     
     // Methods
     // =======
@@ -27,6 +21,8 @@ class Checklist: ObservableObject {
     init() {
         print("Documents directory - \(documentsDirectory())")
         print("Data file - \(dataFilePath())")
+        
+        loadListItem()
     }
     
     func printCheckListContent() {
@@ -38,11 +34,13 @@ class Checklist: ObservableObject {
     func deleteListItem(whichElement: IndexSet) {
         items.remove(atOffsets: whichElement)
         printCheckListContent()
+        saveListItems()
     }
     
     func moveListItem(whichElement: IndexSet, destination: Int) {
         items.move(fromOffsets: whichElement, toOffset: destination)
         printCheckListContent()
+        saveListItems()
     }
     
     func documentsDirectory() -> URL {
@@ -54,5 +52,37 @@ class Checklist: ObservableObject {
     
     func dataFilePath() -> URL {
         return documentsDirectory().appendingPathComponent("Checklist.plist")
+    }
+    
+    func saveListItems() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(items)
+            
+            print(data)
+            
+            try data.write(to: dataFilePath(),
+                           options: Data.WritingOptions.atomic)
+        }
+        catch {
+            print("Error enciding item array: \(error.localizedDescription)")
+        }
+    }
+    
+    func loadListItem() {
+        let path = dataFilePath()
+        
+        guard let data = try? Data(contentsOf: path) else {
+            return;
+        }
+        
+        let decoder = PropertyListDecoder()
+        
+        do {
+            items = try decoder.decode([ChecklistItem].self, from: data)
+        }
+        catch {
+            print("Error decoding item array: \(error.localizedDescription)")
+        }
     }
 }
